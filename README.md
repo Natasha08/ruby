@@ -1,24 +1,64 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+//create project
 
-Things you may want to cover:
+```
+git clone git@github.com:Natasha08/ruby.git
+```
 
-* Ruby version
+// If rvm is not installed
 
-* System dependencies
+https://rvm.io/rvm/install
 
-* Configuration
+// If rvm installed & ruby 2.3.1 is installed on your machine (but not in use)
 
-* Database creation
+```
+rvm use 2.3.1
+```
 
-* Database initialization
+// If rvm is installed, but not ruby 2.3.1
 
-* How to run the test suite
+```
+rvm install ruby-2.3.1
+```
+// Install rails
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+gem install rails  //version 5
+```
 
-* Deployment instructions
+```
+rails --version
+```
 
-* ...
+// Install dependencies(gems)
+bin/rails db:migrate RAILS_ENV=development
+
+```
+bundle install
+```
+
+// Start server
+
+```
+bin/rails server
+```
+// Run tests
+
+```
+bundle/exec rspec
+```
+// Or for more descriptive output
+
+```
+bin/rspec --format doc
+```
+
+// common error and solution
+
+#Migrations are pending.
+To resolve this issue, run:
+
+```
+bin/rails db:migrate RAILS_ENV=development
+```
