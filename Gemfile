@@ -8,6 +8,10 @@ gem 'sqlite3'
 # RSpec for testing
 gem 'rspec', '~> 3.0'
 gem 'rails-controller-testing'
+# capybara
+gem 'capybara'
+#factory_girl
+gem "factory_girl_rails", "~> 4.0"
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -37,6 +41,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.4'
+  gem 'launchy'
 end
 
 group :development do

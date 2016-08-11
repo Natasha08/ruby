@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
-  http_basic_authenticate_with name: "natasha", password: "secret",
-  expect: [:index, :show]
+  # http_basic_authenticate_with name: "natasha", password: "secret",
+  # expect: [:index, :show]
 
   def index
     @articles = Article.all
