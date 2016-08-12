@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 describe ArticlesController do
+
+  let!(:article) { create :article }
+  
   context "GET #index" do
     it "responds successfully with an HTTP 200 status code" do
       get :index
@@ -21,7 +24,6 @@ describe ArticlesController do
 
   context "GET #show" do
     it "responds successfully with an HTTP 200 status code" do
-      article = create(:article)
       get :show, params: {id: article[:id]}
 
       expect(response).to be_success
@@ -31,7 +33,6 @@ describe ArticlesController do
   end
   context "GET #edit" do
     it "responds successfully with an HTTP 200 status code" do
-      article = create(:article)
       get :edit, params: {id: article[:id]}
 
       expect(response).to be_success
@@ -40,7 +41,6 @@ describe ArticlesController do
   end
   context "POST #create" do
     it "responds successfully with an HTTP 200 status code" do
-      article = create(:article)
       post :create, params: {article: {article: article}}
 
       expect(response).to be_success
@@ -49,7 +49,6 @@ describe ArticlesController do
   end
   context "PATCH #update" do
     it "responds successfully with an HTTP 302 status code" do
-      article = create(:article)
       article.update(title: 'Patch Title')
       patch :update, params: {id: article[:id], article: {article: article}}
 
@@ -58,7 +57,6 @@ describe ArticlesController do
   end
   context "DELETE #destroy" do
     it "responds successfully with an HTTP 302 status code" do
-      article = create(:article)
       delete :destroy, params: {id: article[:id]}
 
       expect(response).to have_http_status(302)
