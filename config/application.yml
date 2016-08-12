@@ -1,0 +1,21 @@
+# App keys
+SECRET_TOKEN: '5d28af2e14e3f106d882d1241146ff80aeaa5f4b2d144503ab47d6430af0c5a488f360134105f4b6da31ae53ca7de47f80c5e390d7e5988c34fc59ad73fb43b7'
+
+development:
+  DB_NAME: blog_development
+  DB_USER: blog
+  DB_PASSWORD: development
+
+test:
+  DB_NAME: blog_test
+  DB_USER: blog
+  DB_PASSWORD: development
+
+# production:
+#   DB_NAME: blog_production
+#   DB_USER: blog
+#   DB_PASSWORD: development
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
