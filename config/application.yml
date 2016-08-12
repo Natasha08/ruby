@@ -11,10 +11,10 @@ test:
   DB_USER: blog
   DB_PASSWORD: development
 
-production:
-  DB_NAME: blog_production
-  DB_USER: blog
-  DB_PASSWORD: development
+# production:
+#   DB_NAME: blog_production
+#   DB_USER: blog
+#   DB_PASSWORD: development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
