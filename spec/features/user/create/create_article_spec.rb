@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 feature "user creates an article" do
-  let!(:article) { create :article }
   scenario "the article is created" do
     visit articles_path
     click_on "New article"
