@@ -10,6 +10,8 @@ gem 'rspec', '~> 3.0'
 gem 'rails-controller-testing'
 # capybara
 gem 'capybara'
+#devise
+gem 'devise'
 #factory_girl
 gem "factory_girl_rails", "~> 4.0"
 # Use Puma as the app server
