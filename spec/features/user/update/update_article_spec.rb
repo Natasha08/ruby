@@ -1,7 +1,15 @@
 require 'rails_helper'
 
 feature "user updates an article" do
-    let!(:article) { create :article }
+  let!(:user) { create :user }
+  let!(:article) { create :article }
+
+  before do
+    visit articles_path
+    fill_in "Email", with: 'test_user@test.com'
+    fill_in "Password", with: 'test_password'
+    click_on "Log in"
+  end
   scenario "the article is updated" do
     visit articles_path
     save_and_open_page
